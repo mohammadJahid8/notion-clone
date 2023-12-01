@@ -32,7 +32,7 @@ const Heading = () => {
         </Button>
       )}
       {!isAuthenticated && !isLoading && (
-        <SignInButton mode="modal">
+        <SignInButton mode="modal" afterSignInUrl="/" afterSignUpUrl="/">
           <Button>
             Get Jotion free
             <ArrowRight className="h-4 w-4 ml-2" />

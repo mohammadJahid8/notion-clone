@@ -14,7 +14,6 @@ const Navbar = () => {
   const scrolled = useScrollTop();
 
   const { isAuthenticated, isLoading } = useConvexAuth();
-  console.log(isAuthenticated);
 
   return (
     <div
