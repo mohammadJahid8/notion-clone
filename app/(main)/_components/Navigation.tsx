@@ -1,6 +1,12 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { ChevronsLeft, MenuIcon, PlusCircle } from "lucide-react";
+import {
+  ChevronsLeft,
+  MenuIcon,
+  PlusCircle,
+  Search,
+  Settings,
+} from "lucide-react";
 import { usePathname } from "next/navigation";
 import React, { ElementRef, useEffect, useRef, useState } from "react";
 
@@ -138,6 +144,8 @@ const Navigation = () => {
 
         <div>
           <UserItem />
+          <Item onClick={onCreate} label="Search" icon={Search} isSearch />
+          <Item onClick={onCreate} label="Settings" icon={Settings} />
           <Item onClick={onCreate} label="New Page" icon={PlusCircle} />
         </div>
         <div className="mt-4">
@@ -164,7 +172,7 @@ const Navigation = () => {
           {isCollapsed && (
             <MenuIcon
               onClick={resetWidth}
-              className="h-6 w-6 text-muted-foreground "
+              className="h-6 w-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 transition cursor-pointer"
             />
           )}
         </nav>
