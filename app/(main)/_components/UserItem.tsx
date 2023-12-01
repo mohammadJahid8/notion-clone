@@ -52,7 +52,6 @@ const UserItem = () => {
                 {user?.firstName} &apos;s Jotion
               </p>
             </div>
-            doi
           </div>
         </div>
         <DropdownMenuSeparator />
