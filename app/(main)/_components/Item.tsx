@@ -32,7 +32,7 @@ interface ItemProps {
   isSearch?: boolean;
   level?: number;
   label: string;
-  onClick: () => void;
+  onClick?: () => void;
   onExpand?: () => void;
   icon: LucideIcon;
 }
@@ -144,13 +144,17 @@ const Item = ({
               align="start"
               side="right"
               forceMount
+              onClick={(e) => e.stopPropagation()}
             >
               <DropdownMenuItem onClick={onArchive}>
                 <Trash className="h-4 w-4 mr-2" />
                 Delete
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <div className="text-xs text-muted-foreground p-2">
+              <div
+                className="text-xs text-muted-foreground p-2"
+                onClick={(e) => e.stopPropagation()}
+              >
                 Last edited by: {user?.fullName}
               </div>
             </DropdownMenuContent>
