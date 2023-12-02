@@ -146,7 +146,7 @@ const Item = ({
               forceMount
               onClick={(e) => e.stopPropagation()}
             >
-              <DropdownMenuItem onClick={onArchive}>
+              <DropdownMenuItem onClick={onArchive} className="cursor-pointer">
                 <Trash className="h-4 w-4 mr-2" />
                 Delete
               </DropdownMenuItem>
