@@ -1,6 +1,6 @@
 "use client";
 
-import { useCoverImage } from "@/hooks/user-cover-image";
+import { useCoverImage } from "@/hooks/use-cover-image";
 import { Dialog, DialogContent, DialogHeader } from "../ui/dialog";
 import { useState } from "react";
 import { useEdgeStore } from "@/lib/edgestore";
