@@ -1,5 +1,6 @@
 "use client";
 
+import Editor from "@/app/(main)/_components/Editor";
 import Toolbar from "@/app/(main)/_components/Toolbar";
 import Cover from "@/components/cover";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -42,6 +43,7 @@ const DocumentDetailsPage = ({ params }: DocumentDetailsProps) => {
       <Cover url={document.coverImage} />
       <div className="md:max-w-3xl lg:max-w-4xl mx-auto">
         <Toolbar initialData={document} />
+        <Editor onChange={() => {}} initialContent={document.content} />
       </div>
     </div>
   );
