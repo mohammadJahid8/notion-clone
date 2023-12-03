@@ -224,7 +224,7 @@ export const update = mutation({
     id: v.id("documents"),
     title: v.optional(v.string()),
     content: v.optional(v.string()),
-    coveImage: v.optional(v.string()),
+    coverImage: v.optional(v.string()),
     icon: v.optional(v.string()),
     isPublished: v.optional(v.boolean()),
   },
